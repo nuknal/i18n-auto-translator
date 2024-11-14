@@ -12,7 +12,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "yargs": "^17.7.2"
   },
   "author": "Tarik Ermis <tarik@n3tz.io>",
   "license": "MIT",
@@ -34,8 +35,5 @@
   "bugs": {
     "url": "https://github.com/n3tz-io/i18n-auto-translator/issues"
   },
-  "homepage": "https://github.com/n3tz-io/i18n-auto-translator#readme",
-  "devDependencies": {
-    "yargs": "^17.7.2"
-  }
+  "homepage": "https://github.com/n3tz-io/i18n-auto-translator#readme"
 }
