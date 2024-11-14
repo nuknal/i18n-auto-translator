@@ -3,6 +3,9 @@
   "version": "1.1.0",
   "description": "A package to automatically translate i18n JSON files using OpenAI.",
   "main": "index.js",
+  "bin": {
+    "i18n-auto-translator": "./index.js"
+  },
   "scripts": {
     "translate": "node index.js",
     "tidy": "node lib/tidy.js"

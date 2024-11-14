@@ -22,11 +22,7 @@ To translate your i18n JSON files, you can use the following script:
 npm run translate --apiKey=YOUR_OPENAI_API_KEY --localesDir=./path/to/your/i18n --model=gpt-3.5-turbo
 ```
 
-This script will process all JSON files in the specified `localesDir` directory, translating any missing keys using the OpenAI API. Make sure to replace `YOUR_OPENAI_API_KEY` with your actual OpenAI API
-
- key
-
-.
+This script will process all JSON files in the specified `localesDir` directory, translating any missing keys using the OpenAI API. Make sure to replace `YOUR_OPENAI_API_KEY` with your actual OpenAI API key.
 
 Alternatively, you can use `npx` to run the translation script without installing the package globally:
 
@@ -49,6 +45,10 @@ Alternatively, you can use `npx` to run the tidy script without installing the p
 ```sh
 npx i18n-auto-translator tidy --localesDir=./path/to/your/i18n
 ```
+
+### Using `npx`
+
+`npx` is a tool that comes with npm (since version 5.2.0) and allows you to run commands from npm packages without globally installing them. This can be useful for running scripts like the ones provided by `i18n-auto-translator` without polluting your global npm installation.
 
 ## Configuration
 
