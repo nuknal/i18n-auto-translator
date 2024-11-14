@@ -1,6 +1,6 @@
 {
   "name": "i18n-auto-translator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A package to automatically translate i18n JSON files using OpenAI.",
   "main": "index.js",
   "scripts": {

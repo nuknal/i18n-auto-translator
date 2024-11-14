@@ -8,4 +8,6 @@ if (argv.apiKey) {
   dotenv.config();
 }
 
-processTranslations();
+const localesDir = argv.localesDir || process.env.LOCALES_DIR || "./i18n/";
+
+processTranslations(localesDir);
