@@ -1,6 +1,6 @@
 {
   "name": "i18n-auto-translator",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A package to automatically translate i18n JSON files using OpenAI.",
   "main": "index.js",
   "bin": {
@@ -34,5 +34,8 @@
   "bugs": {
     "url": "https://github.com/n3tz-io/i18n-auto-translator/issues"
   },
-  "homepage": "https://github.com/n3tz-io/i18n-auto-translator#readme"
+  "homepage": "https://github.com/n3tz-io/i18n-auto-translator#readme",
+  "devDependencies": {
+    "yargs": "^17.7.2"
+  }
 }

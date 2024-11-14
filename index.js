@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { processTranslations } = require("./lib/translate");
 const dotenv = require("dotenv");
 const argv = require("yargs").argv;
@@ -10,5 +12,3 @@ const openAiApiKey =
 const openAiModel = argv.model || process.env.OPENAI_MODEL || "gpt-3.5-turbo";
 
 processTranslations(localesDir, openAiApiKey, openAiModel);
-
-module.exports = { processTranslations };
