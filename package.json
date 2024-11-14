@@ -12,5 +12,24 @@
     "dotenv": "^8.2.0"
   },
   "author": "Tarik Ermis <tarik@n3tz.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n3tz-io/i18n-auto-translator.git"
+  },
+  "keywords": [
+    "i18n",
+    "openAI",
+    "chatgpt",
+    "JSON",
+    "translate",
+    "translator"
+  ],
+  "bugs": {
+    "url": "https://github.com/n3tz-io/i18n-auto-translator/issues"
+  },
+  "homepage": "https://github.com/n3tz-io/i18n-auto-translator#readme"
 }
