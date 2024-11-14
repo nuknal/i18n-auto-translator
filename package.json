@@ -1,0 +1,16 @@
+{
+  "name": "i18n-auto-translator",
+  "version": "1.0.0",
+  "description": "A package to automatically translate i18n JSON files using OpenAI.",
+  "main": "index.js",
+  "scripts": {
+    "translate": "node index.js",
+    "tidy": "node lib/tidy.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "dotenv": "^8.2.0"
+  },
+  "author": "Tarik Ermis <tarik@n3tz.io>",
+  "license": "MIT"
+}
