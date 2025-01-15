@@ -1,6 +1,6 @@
 {
   "name": "i18n-auto-translator",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A package to automatically translate i18n JSON files using AI.",
   "main": "index.js",
   "bin": {
@@ -11,8 +11,8 @@
     "tidy": "node lib/tidy.js"
   },
   "dependencies": {
-    "axios": "^0.21.1",
     "@aws-sdk/client-bedrock-runtime": "^3.423.0",
+    "axios": "^1.7.9",
     "dotenv": "^8.2.0",
     "yargs": "^17.7.2"
   },
