@@ -2,13 +2,69 @@
 
 const { processTranslations } = require("./lib/translate");
 const dotenv = require("dotenv");
-const argv = require("yargs").argv;
+const argv = require("yargs")
+  .option("languages", {
+    alias: "l",
+    describe: "Comma-separated list of target languages (e.g., fr,es,de)",
+    type: "string",
+    coerce: (val) => {
+      if (!val) return [];
+      const langs = val
+        .split(",")
+        .map((l) => l.trim())
+        .filter(Boolean);
+      console.log("Parsed languages:", langs);
+      return langs;
+    },
+  })
+  .option("apiKey", {
+    alias: "k",
+    describe: "API key for the selected provider",
+    type: "string",
+  })
+  .option("provider", {
+    alias: "p",
+    describe: "AI provider (openai, claude, or bedrock)",
+    type: "string",
+  })
+  .option("model", {
+    alias: "m",
+    describe: "Model to use for translations",
+    type: "string",
+  })
+  .option("localesDir", {
+    alias: "d",
+    describe: "Directory containing locale files",
+    type: "string",
+  })
+  .option("awsAccessKey", {
+    describe: "AWS Access Key ID for Bedrock",
+    type: "string",
+  })
+  .option("awsSecretKey", {
+    describe: "AWS Secret Access Key for Bedrock",
+    type: "string",
+  })
+  .option("awsRegion", {
+    describe: "AWS Region for Bedrock",
+    type: "string",
+  })
+  .help().argv;
 
 dotenv.config();
 
 const localesDir = argv.localesDir || process.env.LOCALES_DIR || "./i18n/";
-const openAiApiKey =
-  argv.apiKey || process.env.OPENAI_API_KEY || "YOUR_OPENAI_API_KEY";
-const openAiModel = argv.model || process.env.OPENAI_MODEL || "gpt-3.5-turbo";
+const aiApiKey = argv.apiKey || process.env.AI_API_KEY || "YOUR_API_KEY";
+const aiModel = argv.model || process.env.AI_MODEL || "gpt-3.5-turbo";
+const aiProvider = argv.provider || process.env.AI_PROVIDER || "openai";
+const targetLanguages = argv.languages || [];
 
-processTranslations(localesDir, openAiApiKey, openAiModel);
+if (targetLanguages.length === 0) {
+  console.log(
+    "No target languages specified. Using existing language files in the locales directory."
+  );
+} else {
+  console.log(`Target languages: ${targetLanguages.join(", ")}`);
+}
+
+processTranslations(localesDir, aiApiKey, aiModel, aiProvider, targetLanguages);
