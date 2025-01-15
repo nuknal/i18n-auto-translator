@@ -1,4 +1,5 @@
 # i18n-auto-translator
+![i18n-auto-translator](banner.png)
 
 ## Description
 
