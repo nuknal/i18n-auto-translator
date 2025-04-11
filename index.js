@@ -54,9 +54,12 @@ const argv = require('yargs')
 dotenv.config()
 
 const localesDir = argv.localesDir || process.env.LOCALES_DIR || './i18n/'
-const aiApiKey = argv.apiKey || process.env.AI_API_KEY || 'YOUR_API_KEY'
-const aiModel = argv.model || process.env.AI_MODEL || 'deepseek-chat'
-const aiProvider = argv.provider || process.env.AI_PROVIDER || 'openai'
+const aiApiKey =
+  argv.apiKey || process.env.TRANSLATOR_AI_API_KEY || 'YOUR_API_KEY'
+const aiModel = argv.model || process.env.TRANSLATOR_AI_MODEL || 'deepseek-chat'
+const aiProvider =
+  argv.provider || process.env.TRANSLATOR_AI_PROVIDER || 'openai'
+
 const targetLanguages = argv.languages || [
   'zh-CN',
   'zh-TW',
@@ -67,7 +70,6 @@ const targetLanguages = argv.languages || [
   'de',
   'ar',
   'ru',
-  'tr',
 ]
 
 if (targetLanguages.length === 0) {
